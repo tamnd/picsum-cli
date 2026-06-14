@@ -54,13 +54,13 @@ func (Domain) Register(app *kit.App) {
 
 	// image: fetch one image's metadata by numeric id
 	kit.Handle(app, kit.OpMeta{
-		Name:    "image",
-		Group:   "read",
-		Single:  true,
-		Summary: "Get info about a specific image by ID",
-		URIType: "image",
+		Name:     "image",
+		Group:    "read",
+		Single:   true,
+		Summary:  "Get info about a specific image by ID",
+		URIType:  "image",
 		Resolver: true,
-		Args:    []kit.Arg{{Name: "id", Help: "image id (e.g. 42)"}},
+		Args:     []kit.Arg{{Name: "id", Help: "image id (e.g. 42)"}},
 	}, imageOp)
 }
 
